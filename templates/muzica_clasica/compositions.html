@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>Compositions</title>
+    <link rel = "stylesheet" type = "text/css" href = "{% static "css/style.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #fdf5df">
+<h1 class="center">Compozitii</h1>
+
+    <div class = "container tableFixHead">
+   <table class="table-borderless table-sm" >
+      <thead>
+        <tr>
+          <th class = "col">Titlu</th>
+          <th class = "col">An aparitie</th>
+          <th class = "col">Gen</th>
+          <th class = "col">Gama</th>
+          <th class = "col">Nr. instrumente</th>
+          <th class = "col"></th>
+      <th class="col"></th>
+      </thead>
+      <tbody>
+        {% for comp in composition %}
+        <tr>
+          <td class="col" style="text-align: left">{{comp.titlu}}</td>
+          <td class="col">{{comp.an_aparitie}}</td>
+          <td class="col">{{comp.gen}}</td>
+          <td class="col">{{comp.gama}}</td>
+          <td class="col">{{comp.nr_instrumente}}</td>
+        <td class="col">
+                <a href = "{% url 'composition_delete' comp.id %}" style="color: red"> Delete </a>
+          </td>
+            <td class="col">
+                <a href = "{% url 'composition_update' comp.id %}"> Edit </a>
+          </td>
+          {% endfor %}
+      </tbody>
+    </table>
+  </div>
+<button type="button" class="btn" onclick = "window.location.href='{% url 'composition_add' %}'"
+            style="background-color: #5ebec4;color: #fdf5df;margin-left: 50%;
+            margin-top: 25px; font-size: 14pt;">Add</button>
+    </div>
+</body>

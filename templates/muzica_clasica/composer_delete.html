@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<head>
+   <h1>Delete composer</h1>
+    <br><br>
+    <br><br>
+<div class="container">
+    <form action="{% url 'composer_delete' composer.id %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    Are you sure you want to delete {{ composer.prenume }} {{ composer.nume }}?
+        <br><br>
+    <button class="btn btn-danger" type="submit">Delete</button>
+    <a href="{% url 'composers' %}">Cancel</a>
+</form>
+    </div>
+</head>
+<body style="background-color: #fdf5df">
+
+</body>
+</html>
