@@ -2,4 +2,4 @@
 A Django built website which integrates a MySql DB 
 
 The website is hosted on Heroku
- https://classical-db.herokuapp.com/classicaldb/
+ https://classical-db.herokuapp.com
