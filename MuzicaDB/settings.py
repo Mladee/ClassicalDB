@@ -98,10 +98,10 @@ WSGI_APPLICATION = 'MuzicaDB.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_5f42d9728545f4e',
-        'USER': 'bf90e7a8fa192d',
-        'PASSWORD': '78654741',
-        'HOST': 'us-cdbr-east-05.cleardb.net',
+        'NAME': 'classicalmusicdb',
+        'USER': 'django',
+        'PASSWORD': 'u-bpVBtL-wm6&=nn',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
