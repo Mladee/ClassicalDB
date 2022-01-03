@@ -1,1 +1,1 @@
-web: gunicorn MuzicaDB.wsgi --log-file -
+web: gunicorn ClassicalB.wsgi --log-file -
