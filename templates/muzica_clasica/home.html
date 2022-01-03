@@ -11,22 +11,23 @@
 <body style="background-color: #fdf5df">
 <h1 class="center">Classical music database</h1>
 <div style="margin-top: 10%">
-    <img width="250px" height="250px" style="margin-left: 22%;" src="{% static "images/Composer.jpg" %}" alt="compozitor">
-    <img width="250px" height="250px" style="margin-left: 7%;" src="{% static "images/music_scroll.jpg" %}" alt="compozitie">
-    <img width="250px" height="250px" style="margin-left: 7%;" src="{% static "images/Catalogue.jpg" %}" alt="catalog">
-</div>
-<div>
-     <button type="button" class="btn" onclick = "window.location.href='{% url 'composers' %}'"
-            style="background-color: #5ebec4;color: #fdf5df;margin-left: 25%;
-            margin-top: 25px; font-size: 14pt;">COMPOZITORI</button>
+     <table class="table-borderless table-sm">
+         <tbody>
+        <td class="col"> <img width="250px" height="250px"  src="{% static "images/Composer.jpg" %}" alt="compozitor"></td>
+        <td class="col"><img width="250px" height="250px"  src="{% static "images/music_scroll.jpg" %}" alt="compozitie"></td>
+        <td class="col"> <img width="250px" height="250px" src="{% static "images/Catalogue.jpg" %}" alt="catalog"></td>
+         </tbody>
 
-    <button type="button" class="btn" onclick = "window.location.href='{% url '_composition' %}'"
-            style="background-color: #5ebec4;color: #fdf5df;margin-left: 12%;margin-right: 12%;
-            margin-top: 25px; font-size: 14pt;">COMPOZITII</button>
+     <td class="col"> <button type="button" class="btn" onclick = "window.location.href='{% url 'composers' %}'"
+            style="background-color: #5ebec4;color: #fdf5df; font-size: 14pt;text-align: center">COMPOZITORI</button></td>
 
-    <button type="button" class="btn" onclick = "window.location.href='{% url '_catalogues' %}'"
-            style="background-color: #5ebec4;color: #fdf5df;margin-right: 15%;
-            margin-top: 25px; font-size: 14pt;">CATALOAGE</button>
+    <td class="col"> <button type="button" class="btn" onclick = "window.location.href='{% url '_composition' %}'"
+            style="background-color: #5ebec4;color: #fdf5df; font-size: 14pt;text-align: center">COMPOZITII</button></td>
+
+     <td class="col"><button type="button" class="btn" onclick = "window.location.href='{% url '_catalogues' %}'"
+            style="background-color: #5ebec4;color: #fdf5df; font-size: 14pt;text-align: center">CATALOAGE</button></td>
+         </tbody>
+    </table>
 </div>
 </body>
 </html>
